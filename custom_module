@@ -1,0 +1,45 @@
+##################################
+# Just an arbitray custom module #
+##################################
+import pandas as pd
+import json
+
+config = {
+    'metadata' : {
+        'name': 'Custom module',
+        'type': 'widget',
+        'version': '0.0.1',
+        },
+    'requirements': [
+        'pandas==0.24.1'
+        ],
+    'outputs': [
+        { 
+            'key': 'compliant',
+            'name': 'Outlier compliant datapoints'
+            }
+        ],
+    'wizard': {
+        'steps' : [
+            {   'label': 'Define data input',
+                'elements': [
+                    {
+                        'type':'input',
+                        'key': 'name',
+                        'label':'Enter filter name'
+                        },
+                    {
+                        'type':'datainput',
+                        'key': 'production_data'
+                        }
+               ]},
+            ]},
+    'visualizations': [
+        ]
+    }
+
+
+def execute(data, args, state):
+    return {}
+
+
