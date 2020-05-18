@@ -6,7 +6,7 @@ import json
 
 config = {
     'metadata' : {
-        'name': 'Custom downloaded module',
+        'name': 'Downloaded custom module',
         'type': 'widget',
         'version': '0.0.1',
         },
